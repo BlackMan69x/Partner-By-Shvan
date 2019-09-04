@@ -39,7 +39,7 @@ dreamsForm.onsubmit = function(event) {
   // stop our form submission from refreshing the page
   event.preventDefault();
   
-  // add the dream to the database
+  // add the dream to the database - NOTE: to actually add to the database, remix this app and comment out the lines here: https://glitch.com/edit/#!/silicon-blackbird?path=server.js:64:4
   console.log(`attempt to add dream ${dreamInput.value}`);
   const data = {dream: dreamInput.value};
   

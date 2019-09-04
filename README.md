@@ -23,6 +23,7 @@ On the back-end,
 This app has a database!
 - this app uses sqlite but you can power your apps with [a number of other storage options](https://glitch.com/storage)
 - `sqlite.db` is created and put into the `.data` folder, a hidden directory whose contents aren’t copied when a project is remixed. you can see the contents of `.data` in the console under "Logs"
+- to add to the database, uncomment lines 64-74 in `server.js`
 
 
 Made by [Glitch](https://glitch.com/)

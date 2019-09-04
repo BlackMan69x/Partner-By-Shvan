@@ -62,14 +62,14 @@ app.post('/addDream', function(request, response){
   console.log('add to dreams', request.body);
   
   // uncomment the lines below to add your dream to the database!
-  db.run(`INSERT INTO Dreams (dream) VALUE ${request.body.dream}`, (error) => {
-    if(error){
-      response.send({message: 'error!'});
-    }else{
-      response.send({message: 'success'});
-    }
-  }
-  );
+  // db.run(`INSERT INTO Dreams (dream) VALUES ("${request.body.dream}")`, (error) => {
+  //   if(error){
+  //     response.send({message: 'error!'});
+  //   }else{
+  //     response.send({message: 'success'});
+  //   }
+  // }
+  // );
 });
 
 // listen for requests :)
