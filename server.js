@@ -61,7 +61,7 @@ app.get('/getDreams', function(request, response) {
 app.post('/addDream', function(request, response){
   console.log('add to dreams', request.body);
   
-  // uncomment the lines below to add your dream to the database!
+  // remix this app and uncomment the lines below to add your dream to the database!
   // db.run(`INSERT INTO Dreams (dream) VALUES ("${request.body.dream}")`, (error) => {
   //   if(error){
   //     response.send({message: 'error!'});
