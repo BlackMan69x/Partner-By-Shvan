@@ -40,11 +40,15 @@ dreamsForm.onsubmit = function(event) {
   event.preventDefault();
   
   // add the dream to the database
-  console.log('attempt to add dream');
+  console.log(`attempt to add dream ${dreamInput.value}`);
+  const data = {dream: dreamInput.value};
+  
   fetch('/addDream', {
     method: 'POST',
-    body: dreamInput.value,
-  });
+    body: JSON.stringify(data),
+    headers: {'Content-Type': 'application/json'},
+  }).then(res => res.json())
+  .then(response => console.log(JSON.stringify(response)));
 
   // get dream value and add it to the list
   dreams.push(dreamInput.value);
