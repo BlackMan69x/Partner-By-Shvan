@@ -38,6 +38,13 @@ const appendNewDream = function(dream) {
 dreamsForm.onsubmit = function(event) {
   // stop our form submission from refreshing the page
   event.preventDefault();
+  
+  // add the dream to the database
+  console.log('attempt to add dream');
+  fetch('/addDream', {
+    method: 'POST',
+    body: dreamInput.value,
+  });
 
   // get dream value and add it to the list
   dreams.push(dreamInput.value);

@@ -5,7 +5,9 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
+var fs = require('fs');
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 // we've started you off with Express, 
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
@@ -53,6 +55,21 @@ app.get('/getDreams', function(request, response) {
   db.all('SELECT * from Dreams', function(err, rows) {
     response.send(JSON.stringify(rows));
   });
+});
+
+// Add a dream
+app.get('/addDream', function(request, response){
+  console.log(`add to dreams ${request.body}`);
+  
+  // uncomment the lines below to add your dream to the database!
+  db.run(`INSERT INTO Dreams (dream) VALUE ${request.body}`, (error) => {
+    if(error){
+      response.send({message: 'error!'});
+    }else{
+      response.send({message: 'success'});
+    }
+  }
+  );
 });
 
 // listen for requests :)
