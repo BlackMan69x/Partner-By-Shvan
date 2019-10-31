@@ -1,5 +1,4 @@
-Welcome to Glitch
-=================
+# Welcome to Glitch
 
 Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
 
@@ -7,26 +6,27 @@ Click `Show` in the header to see your app live. Updates to your code will insta
 
 Find out more [about Glitch](https://glitch.com/about).
 
-
-Your Project
-------------
+## Your Project
 
 On the front-end,
+
 - edit `public/client.js`, `public/style.css` and `views/index.html`
 - drag in `assets`, like images or music, to add them to your project
 
 On the back-end,
+
 - your app starts at `server.js`
 - add frameworks and packages in `package.json`
 - safely store app secrets in `.env` (nobody can see this but you and people you invite)
 
 This app has a database!
+
 - this app uses sqlite but you can power your apps with [a number of other storage options](https://glitch.com/storage)
 - `sqlite.db` is created and put into the `.data` folder, a hidden directory whose contents aren’t copied when a project is remixed. you can see the contents of `.data` in the console under "Logs"
-- to add to the database, uncomment lines 64-74 in `server.js`
 
+## Adding to the database
+- Remix this app and uncomment lines 65-72 in `server.js`
 
-Made by [Glitch](https://glitch.com/)
--------------------
+## Made by [Glitch](https://glitch.com/)
 
-\ ゜o゜)ノ
+\ ゜ o ゜)ノ
