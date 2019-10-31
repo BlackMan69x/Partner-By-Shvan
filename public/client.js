@@ -57,3 +57,8 @@ dreamsForm.onsubmit = function(event) {
   dreamInput.value = '';
   dreamInput.focus();
 };
+
+// TODO
+// - change line 25 to use fetch
+// - add comment about fetch
+// - give success response after POST (to client)

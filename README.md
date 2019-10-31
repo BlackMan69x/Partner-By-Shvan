@@ -25,7 +25,7 @@ This app has a database!
 - `sqlite.db` is created and put into the `.data` folder, a hidden directory whose contents aren’t copied when a project is remixed. you can see the contents of `.data` in the console under "Logs"
 
 ## Adding to the database
-- Remix this app and uncomment lines 65-72 in `server.js`
+- Remix this app!
 
 ## Made by [Glitch](https://glitch.com/)
 
