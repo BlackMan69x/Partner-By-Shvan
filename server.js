@@ -62,8 +62,8 @@ app.get("/getDreams", function(request, response) {
 app.post("/addDream", function(request, response) {
   console.log("add to dreams", request.body);
 
-  // DISALLOW_WRITE is an env variable is set to TRUE for this template
-  // but if you remix, this variable will be reset so you can add to the database
+  // DISALLOW_WRITE is an ENV variable set to TRUE in this template (in .env)
+  // When you remix the app, DISALLOW_WRITE will be reset, andyou can add to the database
   if (!process.env.DISALLOW_WRITE) {
     db.run(
       `INSERT INTO Dreams (dream) VALUES ("${request.body.dream}")`,
