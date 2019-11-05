@@ -59,8 +59,7 @@ app.get("/getDreams", (request, response) => {
 app.post("/addDream", (request, response) => {
   console.log(`add to dreams ${request.body}`);
 
-  // DISALLOW_WRITE is an ENV variable set to TRUE in this template (in .env)
-  // When you remix the app, DISALLOW_WRITE will be reset, and you can add to the database
+  // DISALLOW_WRITE is an ENV variable that gets reset for new projects so you can write to the database
   if (!process.env.DISALLOW_WRITE) {
     db.run(
       `INSERT INTO Dreams (dream) VALUES ("${request.body.dream}")`,
@@ -77,9 +76,8 @@ app.post("/addDream", (request, response) => {
 
 // endpoint to clear dreams from the database
 app.get("/clearDreams", (request, response) => {
-  // DISALLOW_WRITE is an ENV variable set to TRUE in this template (in .env)
-  // When you remix the app, DISALLOW_WRITE will be reset, and you can clear the database
-  if (!process.env.DISALLOW_REWRITE) {
+  // DISALLOW_WRITE is an ENV variable that gets reset for new projects so you can write to the database
+  if (!process.env.DISALLOW_WRITE) {
     db.each(
       "SELECT * from Dreams",
       (err, row) => {
