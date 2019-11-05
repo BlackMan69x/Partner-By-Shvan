@@ -6,9 +6,10 @@ console.log("hello world :o");
 const dreams = [];
 
 // define variables that reference elements on our page
-const dreamsList = document.getElementById("dreams");
 const dreamsForm = document.forms[0];
 const dreamInput = dreamsForm.elements["dream"];
+const dreamsList = document.getElementById("dreams");
+const dreamsClearBtn = document.getElementById('clear-dreams');
 
 // request the dreams from our app's sqlite database
 fetch("/getDreams", {
@@ -22,14 +23,14 @@ fetch("/getDreams", {
   });
 
 // a helper function that creates a list item for a given dream
-const appendNewDream = function(dream) {
+const appendNewDream = (dream) => {
   const newListItem = document.createElement("li");
   newListItem.innerHTML = dream;
   dreamsList.appendChild(newListItem);
 };
 
 // listen for the form to be submitted and add a new dream when it is
-dreamsForm.onsubmit = function(event) {
+dreamsForm.onsubmit = (event) => {
   // stop our form submission from refreshing the page
   event.preventDefault();
 
@@ -53,3 +54,15 @@ dreamsForm.onsubmit = function(event) {
   dreamInput.value = "";
   dreamInput.focus();
 };
+
+const clearDreams = (event) => {
+  console.log('clearDreams');
+  fetch("/clearDreams", {
+    method: "GET"
+  })
+  .then(res => res.json())
+  .then(response => {
+    console.log('cleared dreams');
+    dreamsList.innerHTML = '';
+  })
+}

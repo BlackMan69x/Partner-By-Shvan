@@ -56,11 +56,11 @@ app.get("/getDreams", (request, response) => {
 });
 
 // endpoint to add a dream to the database
-app.post("/addDream", (request, response)  => {
+app.post("/addDream", (request, response) => {
   console.log(`add to dreams ${request.body}`);
 
   // DISALLOW_WRITE is an ENV variable set to TRUE in this template (in .env)
-  // When you remix the app, DISALLOW_WRITE will be reset, andyou can add to the database
+  // When you remix the app, DISALLOW_WRITE will be reset, and you can add to the database
   if (!process.env.DISALLOW_WRITE) {
     db.run(
       `INSERT INTO Dreams (dream) VALUES ("${request.body.dream}")`,
@@ -76,10 +76,18 @@ app.post("/addDream", (request, response)  => {
 });
 
 // endpoint to clear dreams from the database
-app.get('/clearDreams', (request, response) => {
-   db.each("SELECT * from Dreams", (err, row) => {
-    db.run(`DELETE FROM Dreams WHERE ID=?`, rows.id)
-  });
+app.get("/clearDreams", (request, response) => {
+  // DISALLOW_WRITE is an ENV variable set to TRUE in this template (in .env)
+  // When you remix the app, DISALLOW_WRITE will be reset, and you can clear the database
+  if (!process.env.DISALLOW_REWRITE) {
+    db.each("SELECT * from Dreams", (err, row) => {
+      db.run(`DELETE FROM Dreams WHERE ID=?`, row.id, err => {
+        if (row) {
+          console.log(`deleted row ${row.id}`);
+        }
+      });
+    });
+  }
 });
 
 // listen for requests :)
