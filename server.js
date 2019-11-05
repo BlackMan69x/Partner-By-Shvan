@@ -28,7 +28,7 @@ db.serialize(() => {
     console.log("New table Dreams created!");
 
     // insert default dreams
-    db.serialize(function() {
+    db.serialize(() => {
       db.run(
         'INSERT INTO Dreams (dream) VALUES ("Find and count some sheep"), ("Climb a really tall mountain"), ("Wash the dishes")'
       );
@@ -80,13 +80,24 @@ app.get("/clearDreams", (request, response) => {
   // DISALLOW_WRITE is an ENV variable set to TRUE in this template (in .env)
   // When you remix the app, DISALLOW_WRITE will be reset, and you can clear the database
   if (!process.env.DISALLOW_REWRITE) {
-    db.each("SELECT * from Dreams", (err, row) => {
-      db.run(`DELETE FROM Dreams WHERE ID=?`, row.id, err => {
-        if (row) {
-          console.log(`deleted row ${row.id}`);
+    db.each(
+      "SELECT * from Dreams",
+      (err, row) => {
+        console.log("row", row);
+        db.run(`DELETE FROM Dreams WHERE ID=?`, row.id, error => {
+          if (row) {
+            console.log(`deleted row ${row.id}`);
+          }
+        });
+      },
+      err => {
+        if (err) {
+          response.send({ message: "error!" });
+        } else {
+          response.send({ message: "success" });
         }
-      });
-    });
+      }
+    );
   }
 });
 

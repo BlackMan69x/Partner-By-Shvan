@@ -56,7 +56,6 @@ dreamsForm.onsubmit = (event) => {
 };
 
 const clearDreams = (event) => {
-  console.log('clearDreams');
   fetch("/clearDreams", {
     method: "GET"
   })
