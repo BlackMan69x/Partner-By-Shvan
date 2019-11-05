@@ -37,7 +37,7 @@ db.serialize(() => {
     console.log('Database "Dreams" ready to go!');
     db.each("SELECT * from Dreams", (err, row) => {
       if (row) {
-        console.log(`record: ${row}`);
+        console.log(`record: ${row.dream}`);
       }
     });
   }
