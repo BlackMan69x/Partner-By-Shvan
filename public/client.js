@@ -22,14 +22,14 @@ fetch("/getDreams", {
   });
 
 // a helper function that creates a list item for a given dream
-const appendNewDream = (dream) => {
+const appendNewDream = dream => {
   const newListItem = document.createElement("li");
   newListItem.innerHTML = dream;
   dreamsList.appendChild(newListItem);
 };
 
 // listen for the form to be submitted and add a new dream when it is
-dreamsForm.onsubmit = (event) => {
+dreamsForm.onsubmit = event => {
   // stop our form submission from refreshing the page
   event.preventDefault();
 
@@ -54,13 +54,13 @@ dreamsForm.onsubmit = (event) => {
   dreamInput.focus();
 };
 
-const clearDreams = (event) => {
+const clearDreams = event => {
   fetch("/clearDreams", {
     method: "GET"
   })
-  .then(res => res.json())
-  .then(response => {
-    console.log('cleared dreams');
-  });
-  dreamsList.innerHTML = '';
-}
+    .then(res => res.json())
+    .then(response => {
+      console.log("cleared dreams");
+    });
+  dreamsList.innerHTML = "";
+};
