@@ -11,9 +11,7 @@ const dreamInput = dreamsForm.elements["dream"];
 const dreamsList = document.getElementById("dreams");
 
 // request the dreams from our app's sqlite database
-fetch("/getDreams", {
-  method: "GET"
-})
+fetch("/getDreams", {})
   .then(res => res.json())
   .then(response => {
     response.forEach(row => {
@@ -24,7 +22,7 @@ fetch("/getDreams", {
 // a helper function that creates a list item for a given dream
 const appendNewDream = dream => {
   const newListItem = document.createElement("li");
-  newListItem.innerHTML = dream;
+  newListItem.innerText = dream;
   dreamsList.appendChild(newListItem);
 };
 
@@ -33,7 +31,6 @@ dreamsForm.onsubmit = event => {
   // stop our form submission from refreshing the page
   event.preventDefault();
 
-  // add the dream to the database - NOTE: to actually add to the database, remix this app and uncomment lines 62-74 in server.js
   const data = { dream: dreamInput.value };
 
   fetch("/addDream", {
@@ -55,9 +52,7 @@ dreamsForm.onsubmit = event => {
 };
 
 const clearDreams = event => {
-  fetch("/clearDreams", {
-    method: "GET"
-  })
+  fetch("/clearDreams", {})
     .then(res => res.json())
     .then(response => {
       console.log("cleared dreams");

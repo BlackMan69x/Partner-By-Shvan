@@ -108,6 +108,3 @@ const cleanseString = function(string) {
 var listener = app.listen(process.env.PORT, () => {
   console.log(`Your app is listening on port ${listener.address().port}`);
 });
-
-// TODO
-// - add "clear" to delete all items (CRUDDY FOR REALS)
