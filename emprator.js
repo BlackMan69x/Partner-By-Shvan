@@ -11,7 +11,7 @@ const app = express();
 }
 const http = require('http');
 app.get("/", (request, response) => {
-  console.log(Date.now() + "");
+  console.log(Date.now() + "hostemprator");
   response.sendStatus(200);
 });
 app.listen(process.env.PORT);
@@ -41,3 +41,28 @@ client.on("ready", () => {
     });
   }, 3000);
 });
+/// REKLAM ///
+client.on('ready' , () => {
+var join = client.channels.get("id voice")/// ئاید ڤۆیس
+if (join) join.join()
+ 
+ 
+})
+ 
+ 
+ 
+client.on("message" , message => {
+ 
+if(message.channel.type === 'dm') {
+ 
+if (message.content.startsWith("https://discord.gg/")) {
+ 
+  message.author.send(`>
+https://discord.gg/keWq5Mp`)/// لینکە سیرڤەرە خۆت
+ 
+  client.channels.get("text id").send(
+`> Nerdra la layan <@${message.author.id}> 
+${message.content}`)
+}
+    }
+        })
