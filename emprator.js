@@ -22,7 +22,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const data = new Map();
 
-client.login(process.env.token);
+client.login(process.Nzc1MTA1MjY2MTU2MDQ0MzA5.X6hfCA.EoSvxtTi2odua0vv1kqrX4jNvzI);
 
 client.on("ready", () => {
   console.log(
