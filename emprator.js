@@ -43,7 +43,7 @@ client.on("ready", () => {
 });
 /// REKLAM ///
 client.on('ready' , () => {
-var join = client.channels.get("id voice")/// ئاید ڤۆیس
+var join = client.channels.get("77499305865076746")/// ئاید ڤۆیس
 if (join) join.join()
  
  
@@ -58,7 +58,7 @@ if(message.channel.type === 'dm') {
 if (message.content.startsWith("https://discord.gg/")) {
  
   message.author.send(`>
-https://discord.gg/keWq5Mp`)/// لینکە سیرڤەرە خۆت
+https://discord.gg/NWN8Qgg5hB`)/// لینکە سیرڤەرە خۆت
  
   client.channels.get("text id").send(
 `> Nerdra la layan <@${message.author.id}> 
