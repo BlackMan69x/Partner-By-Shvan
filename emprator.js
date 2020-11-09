@@ -37,7 +37,7 @@ client.on("ready", () => {
     let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
     client.user.setActivity(STREAMING, {
       type: "PLAYING",
-      url: "https://www.twitch.tv/faith"
+      url: "http://www.twitch.tv/faith"
     });
   }, 3000);
 });
