@@ -42,8 +42,8 @@ client.on("ready", () => {
   }, 3000);
 });
 /// REKLAM ///
-client.on("ready", (776849362642272277) => {
-  var join = client.channels.get("776865410510356491"); /// ئاید ڤۆیس
+client.on("ready", () => {
+  var join = client.channels.get("776849362642272277"); /// ئاید ڤۆیس
   if (join) join.join();
 });
 
@@ -53,7 +53,7 @@ client.on("message", message => {
       message.author.send(`>
 https://discord.gg/ZFyjJ7aAdy`); /// لینکە سیرڤەرە خۆت
 
-      client.channels.get("text id").send(
+      client.channels.get("776849362642272277").send(
         `> Nerdra la layan <@${message.author.id}> 
 ${message.content}`
       );
