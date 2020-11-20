@@ -1,2 +1,2 @@
-**BY EMPRATOR**
-![LOGO](https://cdn.discordapp.com/attachments/769224852686766121/770618461646487582/PicsArt_10-25-02.59.15.jpg)
+**BY SAEWAN**
+![LOGO](https://cdn.discordapp.com/attachments/766319610764853249/779426711909433404/20201021_201535.png)

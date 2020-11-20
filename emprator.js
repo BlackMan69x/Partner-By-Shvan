@@ -27,11 +27,11 @@ client.login(process);
 client.on("ready", () => {
   console.log(
     `Online In Servers : ${client.guilds.size} | Users : ${client.users.size}`
-  ); ///By Emprator
+  ); /////////
   let statuses = [
     `Servers: ${client.guilds.size} | Users: ${client.users.size}`,
-    `😍😍😍😍😍`,
-    `  🔸EMPRATOR IS ONE🔸`
+    `partner bot`,
+    `BY : saewan`
   ];
   setInterval(function() {
     let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
@@ -54,6 +54,7 @@ client.on("message", message => {
 https://discord.gg/ZFyjJ7aAdy`); /// لینکە سیرڤەرە خۆت
 
       client.channels.get("776849362642272277").send(
+        ///ئایدی تێکست
         `> Nerdra la layan <@${message.author.id}> 
 ${message.content}`
       );
