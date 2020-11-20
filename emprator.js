@@ -44,7 +44,7 @@ client.on("ready", () => {
 ////////////
 client.on("ready", () => {
   var join = client.channels.get("776849362642272277"); /// ئاید ڤۆیس
-  if (join) join.join();
+  if (join) join.join();          
 });
 
 client.on("message", saewan => {
@@ -62,4 +62,4 @@ ${saewan.content}`
   }
 });
 
-cli
+client.login("");
