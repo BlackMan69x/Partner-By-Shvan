@@ -59,3 +59,5 @@ ${saewan.content}`
     }
   }
 });
+
+client.login("NzcxNjExMjQ3OTU4NTU2NzMy.X5uo-Q._lLKkCX-w0-46BJ5ASqXtXIy0Y0");
