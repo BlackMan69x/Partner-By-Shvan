@@ -27,11 +27,11 @@ client.login(process);
 client.on("ready", () => {
   console.log(
     `Online In Servers : ${client.guilds.size} | Users : ${client.users.size}`
-  ); /////////
+  ); 
   let statuses = [
     `Servers: ${client.guilds.size} | Users: ${client.users.size}`,
-    `partner bot`,
-    `BY : saewan`
+    `PARTNER BOT `,
+    `BY : SAEWAN`
   ];
   setInterval(function() {
     let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
@@ -41,23 +41,25 @@ client.on("ready", () => {
     });
   }, 3000);
 });
-/// REKLAM ///
+////////////
 client.on("ready", () => {
   var join = client.channels.get("776849362642272277"); /// ئاید ڤۆیس
   if (join) join.join();
 });
 
-client.on("message", message => {
-  if (message.channel.type === "dm") {
-    if (message.content.startsWith("https://discord.gg/")) {
-      message.author.send(`>
+client.on("message", saewan => {
+  if (saewan.channel.type === "dm") {
+    if (saewan.content.startsWith("https://discord.gg/")) {
+      saewan.author.send(`>
 https://discord.gg/ZFyjJ7aAdy`); /// لینکە سیرڤەرە خۆت
 
       client.channels.get("776849362642272277").send(
-        ///ئایدی تێکست
-        `> Nerdra la layan <@${message.author.id}> 
-${message.content}`
+                            ///ئایدی تێکست
+        `> Nerdra la layan <@${saewan.author.id}> 
+${saewan.content}`
       );
     }
   }
 });
+
+cli
