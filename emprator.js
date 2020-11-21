@@ -39,7 +39,36 @@ client.on("ready", () => {
     });
   }, 3000);
 });
-////////////
+
+
+// ======== { • REPLAY • }======== //
+
+client.on("message", SAEWAN => {
+  if (SAEWAN.content.startsWith("reklam")) {
+    SAEWAN.author.send(
+      "https://www.youtube.com/channel/UCCbSb8FKflNU4mgin2WdAPA"
+    );
+    SAEWAN.replay(
+      "**ریـکلامەکەم لە تایـبـەت بـۆ بنێرە**"
+    );
+  }
+});
+
+////////
+
+client.on("message", SAEWAN => {
+  if (SAEWAN.content.startsWith("REKLAM")) {
+    SAEWAN.author.send(
+      "https://www.youtube.com/channel/UCCbSb8FKflNU4mgin2WdAPA"
+    );
+    SAEWAN.rep(
+      "**ریـکلاماکەم لە تایـبـەت بـۆ بنێرە**"
+    );
+  }
+});
+
+// ======== { • REKLAM • }======== //
+
 client.on("ready", () => {
   var join = client.channels.get("776849362642272277"); /// ئاید ڤۆیس
   if (join) join.join();
@@ -59,5 +88,7 @@ ${saewan.content}`
     }
   }
 });
+
+// ======== { • TOKENN • }======== //
 
 client.login("NzcxNjExMjQ3OTU4NTU2NzMy.X5uo-Q._lLKkCX-w0-46BJ5ASqXtXIy0Y0");
