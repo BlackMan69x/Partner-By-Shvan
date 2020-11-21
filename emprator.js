@@ -13,7 +13,7 @@ function sleep(milliseconds) {
 }
 const http = require("http");
 app.get("/", (request, response) => {
-  console.log(Date.now() + "hostsaewan");
+  console.log(Date.now() + "hostemprator");
   response.sendStatus(200);
 });
 app.listen(process.env.PORT);
@@ -63,7 +63,7 @@ client.on("message", SAEWAN => {
 // ======== { • REKLAM • }======== //
 
 client.on("ready", () => {
-  var join = client.channels.get("لێرە ئایدی ژوری ڤۆیس"); ///ID ZURE VC
+  var join = client.channels.get("776849362642272277"); /// ئاید ڤۆیس
   if (join) join.join();
 });
 
@@ -73,9 +73,8 @@ client.on("message", saewan => {
       saewan.author.send(`> **تـۆش ریکلام بۆ ئـەم سێرڤـەرە بکە **  
 https://discord.gg/9DBUNV7`); /// لینکە سیرڤەرە خۆت
 
-      client.channels.get("لێرە ئایدی ژوری تێکست").send(
-        ////ئایدی ژوری تێکست
-
+      client.channels.get("760103301575344148").send(////ئایدی ژوری تێکست
+ 
         `> Nerdra la layan <@${saewan.author.id}> 
 ${saewan.content}`
       );
@@ -85,5 +84,5 @@ ${saewan.content}`
 
 // ======== { • TOKENN • }======== //
 
-client.login("لێرە ۆکین دابنێ");
+client.login("NzcxNjExMjQ3OTU4NTU2NzMy.X5uo-Q._lLKkCX-w0-46BJ5ASqXtXIy0Y0");
 ////////////////تکایە دەسکاری ئێرەمەکە تا ریمێکس دەیکت
