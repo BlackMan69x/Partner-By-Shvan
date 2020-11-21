@@ -63,7 +63,7 @@ client.on("message", SAEWAN => {
 // ======== { • REKLAM • }======== //
 
 client.on("ready", () => {
-  var join = client.channels.get("776849362642272277"); /// ئاید ڤۆیس
+  var join = client.channels.get("لێرە ئایدی ژوری ڤۆیس"); ///ID ZURE VC
   if (join) join.join();
 });
 
@@ -73,7 +73,7 @@ client.on("message", saewan => {
       saewan.author.send(`> **تـۆش ریکلام بۆ ئـەم سێرڤـەرە بکە **  
 https://discord.gg/9DBUNV7`); /// لینکە سیرڤەرە خۆت
 
-      client.channels.get("760103301575344148").send(////ئایدی ژوری تێکست
+      client.channels.get("لێرە ئایدی ژوری تێکست").send(////ئایدی ژوری تێکست
  
         `> Nerdra la layan <@${saewan.author.id}> 
 ${saewan.content}`
@@ -84,5 +84,5 @@ ${saewan.content}`
 
 // ======== { • TOKENN • }======== //
 
-client.login("NzcxNjExMjQ3OTU4NTU2NzMy.X5uo-Q._lLKkCX-w0-46BJ5ASqXtXIy0Y0");
+client.login("لێرە ۆکین دابنێ");
 ////////////////تکایە دەسکاری ئێرەمەکە تا ریمێکس دەیکت
