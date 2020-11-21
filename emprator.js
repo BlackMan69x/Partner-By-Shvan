@@ -40,17 +40,12 @@ client.on("ready", () => {
   }, 3000);
 });
 
-
 // ======== { • REPLAY • }======== //
 
 client.on("message", SAEWAN => {
   if (SAEWAN.content.startsWith("reklam")) {
-    SAEWAN.author.send(
-      "https://www.youtube.com/channel/UCCbSb8FKflNU4mgin2WdAPA"
-    );
-    SAEWAN.replay(
-      "**ریـکلامەکەم لە تایـبـەت بـۆ بنێرە**"
-    );
+    SAEWAN.author.send("چاوەکەم ریـکـلامـەکـەم بـۆ بنێرە");
+    SAEWAN.reply("**ریـکلامەکەم لە تایـبـەت بـۆ بنێرە**");
   }
 });
 
@@ -58,14 +53,22 @@ client.on("message", SAEWAN => {
 
 client.on("message", SAEWAN => {
   if (SAEWAN.content.startsWith("REKLAM")) {
-    SAEWAN.author.send(
-      "https://www.youtube.com/channel/UCCbSb8FKflNU4mgin2WdAPA"
-    );
-    SAEWAN.rep(
-      "**ریـکلاماکەم لە تایـبـەت بـۆ بنێرە**"
-    );
+    SAEWAN.author.send("**چاوەکەم ریـکـلامـەکـەم بـۆ بنێرە**");
+    SAEWAN.reply("**ریـکلاماکەم لە تایـبـەت بـۆ بنێرە**");
   }
 });
+
+//
+client.on("message", saewan => {
+  if (saewan.author.bot) return;
+  if (saewan.content.includes("reklam")) {
+    if (saewan.member.hasPermission("MENTION_EVERYONE")) return;
+    if (!saewan.channel.guild) return;
+    saewan.reply("**ریکلام بنێرە**");
+    saewan.author.send("ریکلام بنێرە");
+  }
+});
+// ========
 
 // ======== { • REKLAM • }======== //
 
