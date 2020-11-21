@@ -10,7 +10,7 @@
     "start": "node emprator.js"
   },
   "dependencies": {
-    "discord.js": "^11.5.1",
+    "discord.js": "^12.4.0",
     "express": "^4.17.1"
   },
   "engines": {
