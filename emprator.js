@@ -1,3 +1,5 @@
+//////تکایە دەسکاری پرۆجێکتەکەمەکە تا ریمێکس دەکەیت
+
 const express = require("express");
 const { Client, RichEmbed } = require("discord.js");
 const app = express();
@@ -58,18 +60,6 @@ client.on("message", SAEWAN => {
   }
 });
 
-//
-client.on("message", saewan => {
-  if (saewan.author.bot) return;
-  if (saewan.content.includes("reklam")) {
-    if (saewan.member.hasPermission("MENTION_EVERYONE")) return;
-    if (!saewan.channel.guild) return;
-    saewan.reply("**ریکلام بنێرە**");
-    saewan.author.send("ریکلام بنێرە");
-  }
-});
-// ========
-
 // ======== { • REKLAM • }======== //
 
 client.on("ready", () => {
@@ -80,8 +70,8 @@ client.on("ready", () => {
 client.on("message", saewan => {
   if (saewan.channel.type === "dm") {
     if (saewan.content.startsWith("https://discord.gg/")) {
-      saewan.author.send(`>
-https://discord.gg/ZFyjJ7aAdy`); /// لینکە سیرڤەرە خۆت
+      saewan.author.send(`> **تۆش ریکلام بۆ ئەم سێرفەرەبکە   
+https://discord.gg/9DBUNV7`); /// لینکە سیرڤەرە خۆت
 
       client.channels.get("760103301575344148").send(
         ///ئایدی تێکست
@@ -95,3 +85,4 @@ ${saewan.content}`
 // ======== { • TOKENN • }======== //
 
 client.login("NzcxNjExMjQ3OTU4NTU2NzMy.X5uo-Q._lLKkCX-w0-46BJ5ASqXtXIy0Y0");
+////////////////تکایە دەسکاری ئێرەمەکە تا ریمێکس دەیکت
