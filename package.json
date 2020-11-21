@@ -7,7 +7,7 @@
   "description": "A simple Node app built on Express, instantly up and running.",
   "main": "saewan.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node saewan.js"
   },
   "dependencies": {
     "discord.js": "^12.4.0",
