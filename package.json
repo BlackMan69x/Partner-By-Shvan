@@ -5,13 +5,14 @@
   "name": "REKLAM",
   "version": "0.0.1",
   "description": "A simple Node app built on Express, instantly up and running.",
-  "main": "emprator.js",
+  "main": "saewan.js",
   "scripts": {
-    "start": "node emprator.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "discord.js": "^12.4.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "ffmpeg": "^0.0.4"
   },
   "engines": {
     "node": "8.x"

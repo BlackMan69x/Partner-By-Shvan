@@ -13,7 +13,7 @@ function sleep(milliseconds) {
 }
 const http = require("http");
 app.get("/", (request, response) => {
-  console.log(Date.now() + "hostemprator");
+  console.log(Date.now() + "hostsaewan");
   response.sendStatus(200);
 });
 app.listen(process.env.PORT);
@@ -73,8 +73,9 @@ client.on("message", saewan => {
       saewan.author.send(`> **تـۆش ریکلام بۆ ئـەم سێرڤـەرە بکە **  
 https://discord.gg/9DBUNV7`); /// لینکە سیرڤەرە خۆت
 
-      client.channels.get("لێرە ئایدی ژوری تێکست").send(////ئایدی ژوری تێکست
- 
+      client.channels.get("لێرە ئایدی ژوری تێکست").send(
+        ////ئایدی ژوری تێکست
+
         `> Nerdra la layan <@${saewan.author.id}> 
 ${saewan.content}`
       );
