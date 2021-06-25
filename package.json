@@ -5,9 +5,9 @@
   "name": "REKLAM",
   "version": "0.0.1",
   "description": "A simple Node app built on Express, instantly up and running.",
-  "main": "emprator.js",
+  "main": "shvan.js",
   "scripts": {
-    "start": "node emprator.js"
+    "start": "node shvan.js"
   },
   "dependencies": {
     "discord.js": "^11.5.1",

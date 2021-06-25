@@ -1,2 +1,2 @@
-**BY SAEWAN**
-![LOGO](https://cdn.discordapp.com/attachments/766319610764853249/779426711909433404/20201021_201535.png)
+**BY SHVAN**
+![LOGO]()

@@ -1,5 +1,4 @@
-//////تکایە دەسکاری پرۆجێکتەکەمەکە تا ریمێکس دەکەیت
-
+//////
 const express = require("express");
 const { Client, RichEmbed } = require("discord.js");
 const app = express();
@@ -31,7 +30,7 @@ client.on("ready", () => {
   let statuses = [
     `Servers: ${client.guilds.size} | Users: ${client.users.size}`,
     `PARTNER BOT `,
-    `BY : SAEWAN`
+    `BY : SHVAN`
   ];
   setInterval(function() {
     let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
@@ -44,39 +43,39 @@ client.on("ready", () => {
 
 // ======== { • REPLAY • }======== //
 
-client.on("message", SAEWAN => {
-  if (SAEWAN.content.startsWith("reklam")) {
-    SAEWAN.author.send("**چاوەکەم ریـکـلامـەکـەم بـۆ بنێرە**");
-    SAEWAN.reply("**ریـکلامەکەم لە تایـبـەت بـۆ بنێرە**");
+client.on("message", SHVAN => {
+  if (SHVAN.content.startsWith("reklam")) {
+    SHVAN.author.send("**چاوەکەم ریـکـلامـەکـەم بـۆ بنێرە**");
+    SHVAN.reply("**ریـکلامەکەم لە تایـبـەت بـۆ بنێرە**");
   }
 });
 
 ////////
 
-client.on("message", SAEWAN => {
-  if (SAEWAN.content.startsWith("ریکلام")) {
-    SAEWAN.author.send("**چاوەکەم ریـکـلامـەکـەم بـۆ بنێرە**");
-    SAEWAN.reply("**ریـکلاماکەم لە تایـبـەت بـۆ بنێرە**");
+client.on("message", SHVAN => {
+  if (SHVAN.content.startsWith("ریکلام")) {
+    SHVAN.author.send("**چاوەکەم ریـکـلامـەکـەم بـۆ بنێرە**");
+    SHVAN.reply("**ریـکلاماکەم لە تایـبـەت بـۆ بنێرە**");
   }
 });
 
 // ======== { • REKLAM • }======== //
 
 client.on("ready", () => {
-  var join = client.channels.get("776849362642272277"); /// ئاید ڤۆیس
+  var join = client.channels.get(""); /// ئاید ڤۆیس
   if (join) join.join();
 });
 
-client.on("message", saewan => {
-  if (saewan.channel.type === "dm") {
-    if (saewan.content.startsWith("https://discord.gg/")) {
-      saewan.author.send(`> **تـۆش ریکلام بۆ ئـەم سێرڤـەرە بکە **  
+client.on("message", shvan => {
+  if (shvan.channel.type === "dm") {
+    if (shvan.content.startsWith("https://discord.gg/")) {
+      shvan.author.send(`> **تـۆش ریکلام بۆ ئـەم سێرڤـەرە بکە **  
 https://discord.gg/9DBUNV7`); /// لینکە سیرڤەرە خۆت
 
-      client.channels.get("760103301575344148").send(////ئایدی ژوری تێکست
+      client.channels.get("").send(////ئایدی ژوری تێکست
  
-        `> Nerdra la layan <@${saewan.author.id}> 
-${saewan.content}`
+        `> Nerdra la layan <@${shvan.author.id}> 
+${shvan.content}`
       );
     }
   }
@@ -85,4 +84,4 @@ ${saewan.content}`
 // ======== { • TOKENN • }======== //
 
 client.login("لێرە تۆکین دانە");
-////////////////تکایە دەسکاری ئێرەمەکە تا ریمێکس دەیکت
+////////////////
