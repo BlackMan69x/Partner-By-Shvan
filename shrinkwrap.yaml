@@ -1,5 +1,5 @@
 dependencies:
-  discord.js: 11.6.4
+  discord.js: 11.6.
   express: 4.17.1
 packages:
   /accepts/1.3.7:
